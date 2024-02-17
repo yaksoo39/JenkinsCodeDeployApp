@@ -2,8 +2,12 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      python: 3.7
     commands:
-        - python3.7 -m pip install Flask
+      - echo Installing Python 3.7...
+      - apt-get update && apt-get install -y python3.7
+      - python3.7 -m pip install Flask
   build:
     commands:
       - echo Build started on `date`
@@ -22,3 +26,4 @@ artifacts:
     - scripts/start_flask.sh
     - scripts/stop_flask1.sh
     - scripts/stop_flask.py
+
