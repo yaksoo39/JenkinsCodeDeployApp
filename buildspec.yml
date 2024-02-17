@@ -8,6 +8,8 @@ phases:
       # Install pip3 if not available
       - apt-get update
       - apt-get install -y python3-pip
+      # Upgrade pip and setuptools
+      - pip3 install --upgrade pip setuptools
       # Check pip3 version
       - pip3 --version
       # Install Flask using pip3
