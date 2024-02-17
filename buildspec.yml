@@ -3,12 +3,9 @@ version: 0.2
 phases:
   install:
     commands:
-      # Check for Python 2.x
-      - python --version
-      - pip --version
-      - pip install Flask
       # Check for Python 3.x
       - python3 --version
+      - pip --version
       - pip3 --version
       - python3 -m pip install Flask
   build:
